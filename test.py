@@ -8,6 +8,9 @@ mlflow.set_experiment("/mlflowtest")
 with mlflow.start_run():
     mlflow.log_param("a", 1)
     mlflow.log_metric("b", 2)
+    mlflow.set_tag("test", "testValue!")
+    mlflow.set_tag("Tracking URI", mlflow.get_tracking_uri())
+    mlflow.set_tag("Artifact URI", mlflow.get_artifact_uri())
 
     # Log an artifact (output file)
     if not os.path.exists("outputs"):
