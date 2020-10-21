@@ -1,0 +1,7 @@
+name: mltest
+channels:
+  - defaults
+dependencies:
+  - pip
+  - pip:
+    - mlflow
